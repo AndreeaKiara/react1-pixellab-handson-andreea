@@ -64,3 +64,23 @@ const sentences = person.friends.map((friend) => {
   return `Ma numesc ${name} ${surname} si am ${age} ani.`;
 });
 console.log(sentences);
+
+console.warn(`
+Folosind map pe arrayul friends, returneaza un array in care fiecare
+ pozitie contine propozitia
+“Diferenta de varsta dintre {friendName} si {personName} este {diff}”`);
+const ageDifferenceSentences = person.friends.map((friend) => {
+  const ageDifference = Math.abs(person.age - friend.age);
+  return `Diferenta de varsta dintre ${friend.name} si ${person.name} este ${ageDifference} de ani.`;
+});
+
+console.log(ageDifferenceSentences);
+
+console.warn(`
+Returneaza si afiseaza un array in care fiecare pozitie contine diferenta
+ dintre varsta persoanei si lungimea cuvantului de pe arrayul skill `);
+const ageSkillDifferences = person.skills.map((skill) =>
+  Math.abs(person.age - skill.length),
+);
+
+console.log(ageSkillDifferences);
