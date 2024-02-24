@@ -534,15 +534,32 @@ imaginea. Imi strica alinierea si nu am reusit sa o remediez, asa ca am apelat
   display: flex;
 }
 
-.product-tile-controls a {
+.product-tile-controls button {
+  border: none;
+  background-color: transparent;
   color: #2b2b2b;
   font-size: 25px;
   display: inline-block;
   margin-left: 16px;
+  cursor: pointer;
 }
 
-.product-tile-controls a i:hover {
+.product-tile-controls button i:hover {
   color: #740878;
+}
+
+.product-control .fa-spinner {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* nu am vazut deloc hover in design. sterg daca nu e in regula :D

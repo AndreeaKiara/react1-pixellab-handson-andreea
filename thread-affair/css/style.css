@@ -556,6 +556,20 @@ a {
   background-color: #ff6b6b;
 }
 
+.product-control .fa-spinner {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .home-catalog-preview footer {
   margin: 40px 0;
   text-align: center;
